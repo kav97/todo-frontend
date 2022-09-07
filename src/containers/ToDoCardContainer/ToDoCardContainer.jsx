@@ -46,13 +46,13 @@ const ToDoCardContainer = () => {
   }, []);
 
   return (
-    <div className="todo-container">
+    <>
         <ToDoCard
           toDos = {toDos}
           deleteToDo={deleteToDo}
           noToDos = "Oh no! There appears to be nothing to do today; take a break!"
         />
-    </div>
+    </>
   );
 };
 
