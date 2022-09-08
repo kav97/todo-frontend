@@ -1,8 +1,10 @@
 @use "./assets/styles/variables.scss" as *;
+@use "./assets/styles/reset" as *;
 
 .app{
 
-    margin: 2.5rem;
+    
+    background-image: linear-gradient($color-grey, $color-white);
 
     a {
         text-decoration: none;

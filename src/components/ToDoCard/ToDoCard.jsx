@@ -12,10 +12,10 @@ const ToDoCard = ({ toDos = [], deleteToDo, noToDos}) => {
             {toDos.map((toDo) => {
                 return (
                     <div className="todo-card" key={toDo.id}>
-                        <p>{toDo.text}</p>
-                        <p>{toDo.dateCreated}</p>
+                        <p className="todo-card__text">{toDo.text}</p>
+                        <p className="todo-card__date">{toDo.dateCreated}</p>
                         <button
-                            className="list__edit"
+                            className="todo-card__edit"
                             aria-label="Edit todo item"
                             onClick={(e) => {
                                 e.preventDefault();
@@ -25,7 +25,7 @@ const ToDoCard = ({ toDos = [], deleteToDo, noToDos}) => {
                         <FontAwesomeIcon icon={faPen} />
                         </button>
                         <button
-                            className="list__delete"
+                            className="todo-card__delete"
                             aria-label="Delete todo item"
                             onClick={() => deleteToDo(toDo.id)}
                         >
