@@ -10,7 +10,6 @@ const Form = ({ onSubmit }) => {
         event.preventDefault();
         setText("");
         onSubmit(event.target[0].value);
-        window.location.reload();
     };
 
   return (

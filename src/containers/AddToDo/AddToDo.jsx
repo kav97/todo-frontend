@@ -1,7 +1,7 @@
 import Form from '../../components/Form/Form';
 import './AddToDo.scss'
 
-const NewToDo = () => {
+const AddToDo = () => {
 
     const addItem = async (text) => {
         if (!text) return alert("please enter a todo");
@@ -34,4 +34,4 @@ const NewToDo = () => {
     );
 }
 
-export default NewToDo
+export default AddToDo

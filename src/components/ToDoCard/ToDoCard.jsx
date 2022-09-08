@@ -1,6 +1,6 @@
 import './ToDoCard.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt, faPen } from "@fortawesome/free-solid-svg-icons";
 
 const ToDoCard = ({ toDos = [], deleteToDo, noToDos}) => {
     if (toDos.length === 0) {
@@ -8,12 +8,22 @@ const ToDoCard = ({ toDos = [], deleteToDo, noToDos}) => {
     }
 
     return (
-        <div className="todo-container">
+        <>
             {toDos.map((toDo) => {
                 return (
                     <div className="todo-card" key={toDo.id}>
                         <p>{toDo.text}</p>
                         <p>{toDo.dateCreated}</p>
+                        <button
+                            className="list__edit"
+                            aria-label="Edit todo item"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href=`/update/${toDo.id}`;
+                            }}
+                        >
+                        <FontAwesomeIcon icon={faPen} />
+                        </button>
                         <button
                             className="list__delete"
                             aria-label="Delete todo item"
@@ -25,7 +35,7 @@ const ToDoCard = ({ toDos = [], deleteToDo, noToDos}) => {
                 )
                 
             })}
-        </div>
+        </>
     )
 }
 

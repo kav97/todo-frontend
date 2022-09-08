@@ -46,13 +46,18 @@ const ToDoCardContainer = () => {
   }, []);
 
   return (
-    <>
-        <ToDoCard
-          toDos = {toDos}
-          deleteToDo={deleteToDo}
-          noToDos = "Oh no! There appears to be nothing to do today; take a break!"
-        />
-    </>
+    <div className="todo-container">
+      <button onClick={() => {
+        window.location.href=`/create`;
+      }}>
+        +
+      </button>
+      <ToDoCard
+        toDos = {toDos}
+        deleteToDo={deleteToDo}
+        noToDos = "Oh no! There appears to be nothing to do today; take a break!"
+      />
+    </div>
   );
 };
 
