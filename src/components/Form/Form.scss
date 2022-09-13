@@ -1,0 +1,11 @@
+.text-field__counter {
+    color: green;
+
+    &--amber {
+        color: orange;
+    }
+
+    &--red{
+        color: red;
+    }
+}
