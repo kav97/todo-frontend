@@ -4,8 +4,6 @@ import './AddToDo.scss'
 const AddToDo = () => {
 
     const addItem = async (text) => {
-        // if (!text) return alert("please enter a todo");
-
         const url = `http://localhost:8080/todo`;
 
         try {

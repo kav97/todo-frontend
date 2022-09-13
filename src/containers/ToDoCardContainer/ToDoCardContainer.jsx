@@ -1,8 +1,6 @@
 import "./ToDoCardContainer.scss";
 import { useEffect, useState } from "react";
 import ToDoCard from "../../components/ToDoCard/ToDoCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 
 const ToDoCardContainer = () => {
   const [toDos, setToDos] = useState([]);
@@ -49,12 +47,7 @@ const ToDoCardContainer = () => {
 
   return (
     <div className="todo-container">
-      <button onClick={() => {
-        window.location.href=`/create`;
-      }}
-      >
-        <FontAwesomeIcon icon={faCirclePlus} />
-      </button>
+      
       <ToDoCard
         toDos = {toDos}
         deleteToDo={deleteToDo}
