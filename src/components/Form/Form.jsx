@@ -1,7 +1,7 @@
-import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import './Form.scss'
+import './Form.scss';
+import niceMeme from '../../assets/images/nice.gif';
+import noMeme from '../../assets/images/no-please.gif'
 
 const Form = ({ onSubmit }) => {
     const [text, setText] = useState("");
@@ -9,10 +9,10 @@ const Form = ({ onSubmit }) => {
     let counterStyle = "text-field__counter";
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-        setText("");
-        onSubmit(event.target[0].value);
-        if(!event.target.value || event.target.value.length > 255) return alert("Please enter a todo between 0 - 255 characters long!");
+      event.preventDefault();
+      setText("");
+      onSubmit(event.target[0].value);
+      if(event.target[0].value.length === 0 || event.target[0].value.length > 255) return alert("Please enter a todo between 0 - 255 characters long!");
     };
 
     const handleTextandCount = (event) => {
@@ -20,9 +20,7 @@ const Form = ({ onSubmit }) => {
       setCharCount(event.target.value.length);
     }
 
-    if (charCount > 175 && charCount <= 255) {
-      counterStyle += " text-field__counter--amber";
-    } else if (charCount === 0 || charCount > 255){
+    if (charCount === 0 || charCount > 255){
       counterStyle += " text-field__counter--red";
     }
 
@@ -37,15 +35,9 @@ const Form = ({ onSubmit }) => {
         value={text}
         onChange={(event) => handleTextandCount(event)} 
       />
-      <button
-        className="text-field__button"
-        type="submit"
-        aria-label="Submit new task"
-      >
-        <FontAwesomeIcon icon={faCirclePlus} />
-      </button>
     </form> 
     <p className={counterStyle}>{charCount}/255</p>
+    {charCount === 0 || charCount > 255 ? <img src={noMeme} alt="Michael Scott saying no." className="character-response"/> : <img src={niceMeme} alt="Kid thumbs up." className="character-response"/>}
     </>
   );
 }

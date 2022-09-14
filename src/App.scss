@@ -3,15 +3,15 @@
 
 .app{
 
-    
     background-image: linear-gradient($color-grey, $color-white);
 
-    a {
-        text-decoration: none;
-        color: black;
-        h1{
-            font-family: $font-primary;
-            font-size: 2.5rem;
+    .title {
+        font-family: $font-primary;
+        font-size: 2.5rem;
+        
+        &__link{
+            text-decoration: none;
+            color: black;
         }  
     }
 }

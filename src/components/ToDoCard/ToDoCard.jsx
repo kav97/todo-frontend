@@ -13,7 +13,7 @@ const ToDoCard = ({ toDos = [], deleteToDo, noToDos}) => {
                 return (
                     <div className="todo-card" key={toDo.id}>
                         <p className="todo-card__text">{toDo.text}</p>
-                        <p className="todo-card__date">{toDo.dateCreated}</p>
+                        <p className="todo-card__date">{toDo.dateCreated.substring(0, 10)}</p>
                         <button
                             className="todo-card__edit"
                             aria-label="Edit todo item"
@@ -26,7 +26,7 @@ const ToDoCard = ({ toDos = [], deleteToDo, noToDos}) => {
                         </button>
                         <button
                             className="todo-card__delete"
-                            aria-label="Delete todo item"
+                            aria-label="Delete to-do item"
                             onClick={() => deleteToDo(toDo.id)}
                         >
                         <FontAwesomeIcon icon={faTrashAlt} />
