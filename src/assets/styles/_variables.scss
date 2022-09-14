@@ -12,12 +12,66 @@ $desktop-4k-breakpoint: 2560px;
 $color-black: #2d3436;
 $color-white: #ffffff;
 $color-grey: #A0AAB2;
-$color-green: #00b38a; 
-$color-red: #ea324c;
-
-$color-primary: #94849B;
-$color-secondary: #C7CEDB;
+$color-beige: #e8d3b9;
+$color-blue:  lightblue;
+$color-yellow: #fdcb6e;
+$text-color-green: #00b38a; 
+$text-color-red: #ea324c;
 
 //text 
 $font-primary: "Cormorant";
 $font-secondary: "Shadows Into Light";
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    // adding display and width prevents margin collapse on these semantic text elements
+    margin: 0.25rem 0;
+    display: inline-block;
+    width: 100%;
+}
+
+button {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: $font-secondary;
+    color: $color-black;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: $font-primary;
+    color: $color-black;
+}
+
+p{
+    font-size: 1.5rem;
+    font-family: $font-secondary;
+    font-weight: bolder;
+    color: $color-black;
+}
+
+
+@media screen and (min-width: $tablet-breakpoint) {
+    // increases font-size of all items by 10%
+    :root {
+        font-size: 110%;
+    }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+    // increases font-size of all items by 20%
+    :root {
+        font-size: 120%;
+    }
+}

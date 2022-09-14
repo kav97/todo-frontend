@@ -15,7 +15,7 @@
       color: $color-black;
   
       &:focus {
-        border: 5px $color-primary solid;
+        border: 5px $color-yellow solid;
         outline: none;
       }
     }
@@ -23,11 +23,11 @@
     &__counter {
         font-size: 1.25rem;
         font-weight: bold;
-        color: $color-green;
+        color: $text-color-green;
         text-align: center;
 
         &--red{
-            color: $color-red;
+            color: $text-color-red;
         }
     }
   }

@@ -1,17 +1,20 @@
 @use "./assets/styles/variables.scss" as *;
 @use "./assets/styles/reset" as *;
 
+html{
+    background-color: $color-beige;
+}
+
 .app{
 
-    background-image: linear-gradient($color-grey, $color-white);
+    min-height: 100vh;
 
     .title {
-        font-family: $font-primary;
         font-size: 2.5rem;
         
         &__link{
             text-decoration: none;
-            color: black;
+            color: $color-black;
         }  
     }
 }

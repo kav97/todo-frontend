@@ -12,7 +12,7 @@ const Form = ({ onSubmit }) => {
       event.preventDefault();
       setText("");
       onSubmit(event.target[0].value);
-      if(event.target[0].value.length === 0 || event.target[0].value.length > 255) return alert("Please enter a todo between 0 - 255 characters long!");
+      if(event.target[0].value.length === 0 || event.target[0].value.length > 255) return alert("Please enter a todo between 1 - 255 characters long!");
     };
 
     const handleTextandCount = (event) => {

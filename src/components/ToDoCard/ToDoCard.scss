@@ -1,7 +1,48 @@
 @use "../../assets/styles/variables.scss" as *;
 
 .todo-card {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $color-blue;
+    padding: 15px;
     border: solid 4px $color-black;
     border-radius: 10px;
+    height: 250px;
+    overflow-y: scroll;
+
+    &__date{
+        font-size: 1.25rem;
+        font-style: italic;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+
+        &--update {
+            padding:0.35rem;
+            border-radius: 50%;
+            background-color: $color-white;
+            color: $color-black;
+            border: none;
+            cursor: pointer;
+        }
+
+        &--delete {
+            padding:0.35rem;
+            border-radius: 50%;
+            background-color: $color-black;
+            color: $color-white;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    
+    &::-webkit-scrollbar {
+        width: 5px;
+        &-thumb {
+            background: $color-yellow;
+        }
+    }
 }

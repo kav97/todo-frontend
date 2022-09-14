@@ -45,12 +45,15 @@ const ToDoCardContainer = () => {
     getToDos();
   }, []);
 
+  if (toDos.length === 0) {
+    return <p className="empty-list">"Oh no! There appears to be nothing to do today; take a break!"</p>
+  }
+
   return (
     <section className="todo-container">
       <ToDoCard
         toDos = {toDos}
         deleteToDo={deleteToDo}
-        noToDos = "Oh no! There appears to be nothing to do today; take a break!"
       />
     </section>
   );
