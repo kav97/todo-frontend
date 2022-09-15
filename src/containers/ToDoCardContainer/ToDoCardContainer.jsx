@@ -1,6 +1,7 @@
 import "./ToDoCardContainer.scss";
 import { useEffect, useState } from "react";
 import ToDoCard from "../../components/ToDoCard/ToDoCard";
+import noToDo from "../../assets/images/no-work.gif";
 
 const ToDoCardContainer = () => {
   const [toDos, setToDos] = useState([]);
@@ -46,15 +47,24 @@ const ToDoCardContainer = () => {
   }, []);
 
   if (toDos.length === 0) {
-    return <p className="empty-list">"Oh no! There appears to be nothing to do today; take a break!"</p>
+    return (
+      <div className="empty-list">
+        <p className="empty-list__message">
+          Oh nooo! There appears to be nothing to do today. Why don't you add
+          something to your list? ☝️
+        </p>
+        <img
+          className="empty-list__img"
+          src={noToDo}
+          alt="Yikes nothing to do"
+        />
+      </div>
+    );
   }
 
   return (
     <section className="todo-container">
-      <ToDoCard
-        toDos = {toDos}
-        deleteToDo={deleteToDo}
-      />
+      <ToDoCard toDos={toDos} deleteToDo={deleteToDo} />
     </section>
   );
 };

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 // breakpoints
 $mobile-breakpoint: 320px;
@@ -19,8 +19,7 @@ $text-color-green: #00b38a;
 $text-color-red: #ea324c;
 
 //text 
-$font-primary: "Cormorant";
-$font-secondary: "Shadows Into Light";
+$font-primary: "Shadows Into Light";
 
 
 h1,
@@ -43,20 +42,21 @@ button {
 }
 
 h1 {
-    font-size: 3rem;
-    font-family: $font-secondary;
-    color: $color-black;
-}
-
-h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-family: $font-primary;
     color: $color-black;
 }
 
 p{
     font-size: 1.5rem;
-    font-family: $font-secondary;
+    font-family: $font-primary;
+    font-weight: bolder;
+    color: $color-black;
+}
+
+a{
+    font-size: 3rem;
+    font-family: $font-primary;
     font-weight: bolder;
     color: $color-black;
 }

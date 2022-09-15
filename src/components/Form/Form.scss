@@ -1,41 +1,50 @@
 @use "../../assets/styles/variables.scss" as *;
 
 .text-field {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  &__input {
+    margin: 15px 0 15px 0;
+    padding: 10px;
+    width: 80%;
+    font-size: 1.25rem;
+    border: 5px $color-grey solid;
+    border-radius: 15px;
+    color: $color-black;
+
+    &:focus {
+      border: 5px $color-yellow solid;
+      outline: none;
+    }
+  }
+
+  &__counter {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: $text-color-green;
+    text-align: center;
+
+    &--red {
+      color: $text-color-red;
+    }
+  }
+
+  &__response {
+    margin: 1rem;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .text-field {
     &__input {
-      margin: 15px 0 15px 0;
-      padding: 10px;
-      width: 80%;
-      font-size: 1.25rem;
-      border: 5px $color-grey solid;
-      border-radius: 15px;
-      color: $color-black;
-  
-      &:focus {
-        border: 5px $color-yellow solid;
-        outline: none;
-      }
+      width: calc((100% / 2) - 50px);
     }
 
-    &__counter {
-        font-size: 1.25rem;
-        font-weight: bold;
-        color: $text-color-green;
-        text-align: center;
-
-        &--red{
-            color: $text-color-red;
-        }
+    &__response {
+      max-width: 425px;
     }
   }
-  
-  @media screen and (min-width: $tablet-breakpoint) {
-    .text-field {
-      &__input {
-        width: calc((100% / 2) - 50px);
-      }
-    }
-  }
+}

@@ -1,12 +1,20 @@
-.todo-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
-    gap: 25px;
-    margin: 50px;
-    justify-content: center;
+.todo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  gap: 25px;
+  margin: 50px;
+  justify-content: center;
 }
 
-.empty-list{
-    margin: 2.5rem 0;
+.empty-list {
+  margin: 2.5rem;
+
+  &__message {
     text-align: center;
+  }
+
+  &__img {
+    margin-top: 2.5rem;
+    width: 100%;
+  }
 }
