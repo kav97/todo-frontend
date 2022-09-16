@@ -18,7 +18,7 @@ const ToDoCard = ({ toDos = [], deleteToDo }) => {
                 aria-label="Navigate to update to-do item"
                 onClick={(e) => {
                   e.preventDefault();
-                  window.location.href = `todo-frontend/update/${toDo.id}`;
+                  window.location.href = `update/${toDo.id}`;
                 }}
               >
                 <FontAwesomeIcon icon={faPen} />
