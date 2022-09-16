@@ -4,11 +4,7 @@
 
 This repository holds the front-end to this app and is created using React. To view the Spring back-end click [here](https://github.com/kav97/todo).
 
-</br>
-
 ## Quickstart:
-
-</br>
 
 1. Install the dependencies with `npm install`
 
@@ -17,8 +13,6 @@ This repository holds the front-end to this app and is created using React. To v
 </br>
 
 ## About the project 💭
-
-</br>
 
 - As part of the final project in the _nology course, we were tasked in creating a full-stack project of our choice that incorporates everything we have learned in the past 12 weeks. The application had to include both a front-end and back-end. 
 
@@ -40,9 +34,9 @@ This repository holds the front-end to this app and is created using React. To v
 |:---:|:---:|
 |![](./src/assets/images/mobile-view.jpg)| ![](./src/assets/images/desktop-view.jpg)|
 
-## Future improvements 🌟
-
 </br>
+
+## Future improvements 🌟
 
 - Eventually I would like to add a filtering system to a nav bar that sorts the to-do cards displayed by: date created and priority (red: highest, amber: second and green: lowest).
 
