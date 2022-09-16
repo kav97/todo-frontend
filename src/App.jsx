@@ -9,14 +9,14 @@ const App = () => {
     <Router>
       <div className="app">
         <nav className="nav-bar">
-          <a className="nav-bar__title" href="/">
+          <a className="nav-bar__title" href="todo-frontend/">
             My To-Do's
           </a>
         </nav>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/create" element={<AddToDo />}></Route>
-          <Route path="/update/:id" element={<UpdateToDo />}></Route>
+          <Route path="todo-frontend/" element={<Home />}></Route>
+          <Route path="todo-frontend/create" element={<AddToDo />}></Route>
+          <Route path="todo-frontend/update/:id" element={<UpdateToDo />}></Route>
         </Routes>
       </div>
     </Router>
