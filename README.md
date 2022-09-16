@@ -1,7 +1,5 @@
 # To-Do List Full-Stack project
 
-</br>
-
 This repository holds the front-end to this app and is created using React. To view the Spring back-end click [here](https://github.com/kav97/todo).
 
 ## Quickstart:
