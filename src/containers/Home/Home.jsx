@@ -10,7 +10,7 @@ const Home = () => {
         className="home-page__create-button"
         aria-label="Navigate to create a to-do"
         onClick={() => {
-          window.location.href = `create`;
+          window.location.href = `/todo-frontend/create`;
         }}
       >
         <FontAwesomeIcon icon={faCirclePlus} />
